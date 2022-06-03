@@ -18,3 +18,12 @@ now = dt.datetime.now()
 today_month = now.month
 today_day = now.day
 
+MY_EMAIL = "prettypisces56@gmail.com"
+My_PASSWORD = "pythonTest23"
+
+today_tuple = (today_month, today_day)
+
+data = pandas.read_csv("birthdays.csv")
+birthday_dict = {(data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
+print(birthday_dict)
+
